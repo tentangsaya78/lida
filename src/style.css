@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@theme {
+  --color-primary : #AA7312;
+  --color-secondary : #D4D4D4;
+  --font-sans : 'Montserrat', sans-serif;
+}
+
+@layer base{
+  body{
+    @apply text-gray-800 font-sans;
+  }
+}
+  .container{
+    @apply max-w-[1140px] mx-auto px-6;
+  }
+
+/* =====================
+Dekstop Navbar
+===================== */
+#masthead{
+   @apply fixed top-0 left-0 w-full z-50;
+}
+.dekstop-navbar{
+  @apply hidden lg:block  text-white hover:bg-white hover:text-gray-800 duration-300 ;
+}
+.dekstop-navbar.scrolled{
+  @apply bg-white text-gray-800;
+}
+
+/* =====================
+Mobile Navbar
+===================== */
+
+.mobile-navbar{
+   @apply lg:hidden relative bg-white;
+}
+
+.splide__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary);
+  z-index: 30;
+}
+
+.splide__progress__bar {
+  background: var(--color-secondary);
+  transition: width 0.3s ease;
+}

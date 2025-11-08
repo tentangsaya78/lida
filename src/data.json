@@ -1,0 +1,138 @@
+{
+    "top_menu": [
+        {
+            "label": "Tentang Kami",
+            "url": "#"
+        },
+        {
+            "label": "Konsep Merk",
+            "url": "#"
+        },
+        {
+            "label": "Tampilan Rendering Ruang Pamer",
+            "url": "#"
+        }
+    ],
+    "menu_utama": [
+        {
+            "label": "Kategori",
+            "url": "#",
+            "sub_menu": [
+                {
+                    "label": "Seri Jendela",
+                    "url": "#"
+                },
+                {
+                    "label": "Seri Pintu",
+                    "url": "#"
+                },
+                {
+                    "label": "Seri Pintu Cor Alumunium",
+                    "url": "#"
+                },
+                {
+                    "label": "Mewah Minimalis",
+                    "url": "#"
+                }
+            ]
+        },
+        {
+            "label": "Keunggulan Produk",
+            "url": "#"
+        },
+        {
+            "label": "Pemasangan Profesional",
+            "url": "#"
+        },
+        {
+            "label": "Kartu Nama Produk",
+            "url": "#"
+        }
+    ],
+    "slideshow": [
+        {
+            "image": "https://images.pexels.com/photos/7533766/pexels-photo-7533766.jpeg",
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "sub_title":"Nullam pharetra pretium tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+        },
+        {
+            "image": "https://images.pexels.com/photos/27604130/pexels-photo-27604130.png",
+            "title": "Nullam ut efficitur eros. Proin dictum magna ex, non viverra tellus viverra.",
+            "sub_title":"Sed id ultrices erat. Proin rhoncus ligula vitae bibendum molestie."
+        },
+        {
+            "image": "https://images.pexels.com/photos/34574609/pexels-photo-34574609.jpeg",
+            "title": "Maecenas sit amet commodo arcu. Integer varius aliquet mauris",
+            "sub_title":"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        }
+    ],
+    "rekomendasi": [
+        {
+            "title":"Produk Unggulan"
+        },
+        {
+            "product": [
+                {
+                    "title": "Produk One",
+                    "image": "https://images.pexels.com/photos/922796/pexels-photo-922796.jpeg",
+                    "description":"Suspendisse potenti. Ut nec dapibus velit, in malesuada leo."
+                },
+                {
+                    "title": "Produk Two",
+                    "image": "https://images.pexels.com/photos/3935314/pexels-photo-3935314.jpeg",
+                    "description":"Nulla euismod, dolor at ultrices porta, leo nibh blandit est."
+                },
+                {
+                    "title": "Produk Three",
+                    "image": "https://images.pexels.com/photos/4469147/pexels-photo-4469147.jpeg",
+                    "description":"ed ultrices maximus erat, nec elementum sem bibendum at. "
+                },
+                {
+                    "title": "Produk Four",
+                    "image": "https://images.pexels.com/photos/3255244/pexels-photo-3255244.jpeg",
+                    "description":"Suspendisse tristique, ex non convallis placerat, risus arcu efficitur dui."
+                }
+            ]
+        }
+    ],
+    "sekilas": [
+        {
+            "title": "Tentang Kami",
+            "deskripsi":"Perusahaan dilengkapi dengan peralatan produksi yang canggih, telah membentuk sistem manajemen yang komprehensif, dan secara ketat mematuhi standar sertifikasi sistem manajemen mutu internasional ISO 9001. Semua produk menggunakan aluminium impor, dan aksesori terkait juga disesuaikan secara profesional. "
+        }
+    ],
+    "aplikasi_produk":[
+        {
+            "title":"Produk Dengan Performa",
+            "deskripsi":" Suspendisse tristique, ex non convallis placerat, risus arcu efficitur dui, et fermentum eros lacus eu nulla. Nullam malesuada tempor malesuada. Duis arcu ligula, vehicula ut hendrerit vitae, pharetra non dolor.",
+            "images":[
+                "https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg",
+                "https://images.pexels.com/photos/6758513/pexels-photo-6758513.jpeg",
+                "https://images.pexels.com/photos/7546565/pexels-photo-7546565.jpeg",
+                "https://images.pexels.com/photos/34574602/pexels-photo-34574602.jpeg"
+            ],
+            "button":"Lihat Produk",
+            "url":"#"
+        }
+    ],
+    "katalog":{
+        "title":"Katalog" ,
+        "image":"https://images.pexels.com/photos/8293676/pexels-photo-8293676.jpeg"  
+    },
+    "dukungan":{
+        "title":"Dukungan",
+        "image":"https://images.pexels.com/photos/5455147/pexels-photo-5455147.jpeg"
+    },
+    "footer":{
+            "logo":"./logo.svg",
+            "deskripsi":"PT LIDA KARYA INDONESIA",
+            "contact":{
+                "alamat":"Jl. loremipsum doloretsit amet, consectetur adipiscing elit.",
+                "phone":"(+62) 123-456-789",
+                "email":"9iY2D@example.com"
+            },
+            "copyright":"Copyright © 2025 PT LIDA KARYA INDONESIA | All Rights Reserved."
+         }
+    
+
+}
