@@ -264,7 +264,7 @@
           <div class="flex flex-col gap-2">
             <h4 class="text-lg font-medium">Produk</h4>
             <ul>
-               <template x-for="item in data.menu_utama[0].sub_menu">
+               <template x-for="item in data.menu_utama[1].sub_menu">
                  <li><a :href="item.url" x-text="item.label" class="hover:text-primary duration-200"></a></li>
                </template>
             </ul>

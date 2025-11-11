@@ -38,31 +38,93 @@ Mobile Navbar
    @apply lg:hidden relative bg-white;
 }
 
-.splide__progress {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--color-primary);
-  z-index: 30;
-}
-
-.splide__progress__bar {
-  background: var(--color-secondary);
-  transition: width 0.3s ease;
-}
 
 /* =====================
 Splide
 ===================== */
-.splide__pagination{
- @apply justify-end px-6 w-full max-w-[300px] bottom-6;
-} 
-.splide__pagination__page{
-  @apply w-3 h-3 bg-white;
+/* Splide Pagination Container */
+.splide__pagination {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
 }
 
-.splide__pagination__page.is-active{
-  @apply bg-primary;
+/* Bullet Base Style */
+.splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  margin: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 1;
+  padding: 0;
+}
+
+/* Bullet Hover */
+.splide__pagination__page:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Bullet Active */
+.splide__pagination__page.is-active {
+  background: var(--color-primary);
+  width: 12px;
+  height: 12px;
+}
+
+/* Progress Border Circle */
+.splide__pagination__page.is-active::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-primary) var(--progress, 0deg),
+    transparent var(--progress, 0deg)
+  );
+  -webkit-mask: radial-gradient(
+    circle,
+    transparent 0,
+    transparent 9px,
+    black 9px,
+    black 12px,
+    transparent 12px
+  );
+  mask: radial-gradient(
+    circle,
+    transparent 0,
+    transparent 9px,
+    black 9px,
+    black 12px,
+    transparent 12px
+  );
+  z-index: 1;
+}
+
+/* Alternative: Border style (jika conic-gradient tidak support) */
+@supports not (background: conic-gradient(#000 0deg, #fff 0deg)) {
+  .splide__pagination__page.is-active::before {
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    -webkit-mask: none;
+    mask: none;
+    animation: spin 3s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
 }
