@@ -46,7 +46,7 @@ Splide
   @apply scale-105 ;
 }
 .splide__slide.is-active img{
-  @apply scale-100 duration-700;
+  @apply scale-100 duration-1000;
 }
 /* Splide Pagination Container */
 .splide__pagination {
