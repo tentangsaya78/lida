@@ -42,6 +42,9 @@ Mobile Navbar
 /* =====================
 Splide
 ===================== */
+.splide__slide.is-active img{
+  @apply scale-105 duration-700;
+}
 /* Splide Pagination Container */
 .splide__pagination {
   position: absolute;

@@ -20,7 +20,7 @@ document.addEventListener('alpine:init', () => {
 
 document.addEventListener('alpine:initialized', () => {
   const homeSlider = new Splide('#homeSlider', {
-    type: 'loop',
+    type: 'fade',
     perPage: 1,
     autoplay: true,
     interval: 3000,
