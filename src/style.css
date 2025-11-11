@@ -51,7 +51,7 @@ Splide
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 
 /* Bullet Base Style */
@@ -76,8 +76,8 @@ Splide
 /* Bullet Active */
 .splide__pagination__page.is-active {
   background: var(--color-primary);
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Progress Border Circle */
@@ -87,27 +87,27 @@ Splide
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: conic-gradient(
-    var(--color-primary) var(--progress, 0deg),
+    #fff var(--progress, 0deg),
     transparent var(--progress, 0deg)
   );
   -webkit-mask: radial-gradient(
     circle,
     transparent 0,
-    transparent 9px,
-    black 9px,
+    transparent 12px,
     black 12px,
-    transparent 12px
+    black 12px,
+    transparent 14px
   );
   mask: radial-gradient(
     circle,
     transparent 0,
-    transparent 9px,
-    black 9px,
+    transparent 12px,
     black 12px,
+    black 14px,
     transparent 12px
   );
   z-index: 1;
@@ -116,7 +116,7 @@ Splide
 /* Alternative: Border style (jika conic-gradient tidak support) */
 @supports not (background: conic-gradient(#000 0deg, #fff 0deg)) {
   .splide__pagination__page.is-active::before {
-    border: 2px solid var(--color-primary);
+    border: 1px solid  #fff;
     background: transparent;
     -webkit-mask: none;
     mask: none;

@@ -11,8 +11,8 @@
 <body>
   <div id="app" x-data="dataContent">
     <!-- header dekstop -->
-    <header id="masthead" class="flex flex-col justify-center  items-center dekstop-navbar  border-gray-300/40" :class="{'scrolled': scrolled}"
-      x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 50">
+    <header id="masthead" class="flex flex-col justify-center  items-center dekstop-navbar  border-gray-300/40"
+      :class="{'scrolled': scrolled}" x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 50">
       <div class="container">
         <div class="flex gap-4 items-center justify-between">
           <!-- logo -->
@@ -21,49 +21,49 @@
               <img src="logo.svg" class="w-16 h-auto">
             </a>
           </div>
-              <ul class="flex justify-between gap-6">
-                <template x-for="(item, index) in data.menu_utama" :key="index">
-                  <li class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+          <ul class="flex justify-between gap-6">
+            <template x-for="(item, index) in data.menu_utama" :key="index">
+              <li class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
 
-                    <a :href="item.url"
-                      class="hover:text-primary font-medium uppercase inline-flex items-center gap-1 py-2">
-                      <span x-text="item.label"></span>
-                      <template x-if="item.sub_menu && item.sub_menu.length > 0">
-                        <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }"
-                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </template>
-                    </a>
+                <a :href="item.url"
+                  class="hover:text-primary font-medium uppercase inline-flex items-center gap-1 py-2">
+                  <span x-text="item.label"></span>
+                  <template x-if="item.sub_menu && item.sub_menu.length > 0">
+                    <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </template>
+                </a>
 
-                    <!-- Mega Menu Full Width -->
-                    <template x-if="item.sub_menu && item.sub_menu.length > 0">
-                      <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 -translate-y-2"
-                        x-transition:enter-end="opacity-100 translate-y-0"
-                        x-transition:leave="transition ease-in duration-150"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 -translate-y-2"
-                        class="fixed left-1/2  top-auto -translate-x-1/2  mt-0 bg-white shadow-xl  z-50 w-screen max-w-7xl"
-                        @click.away="open = false">
+                <!-- Mega Menu Full Width -->
+                <template x-if="item.sub_menu && item.sub_menu.length > 0">
+                  <div x-show="open" x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0 -translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-150"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 -translate-y-2"
+                    class="fixed left-1/2  top-auto -translate-x-1/2  mt-0 bg-white shadow-xl  z-50 w-screen max-w-7xl"
+                    @click.away="open = false">
 
-                        <div class="container py-6">
+                    <div class="container py-6">
 
-                          <div class="flex flex-col gap-4">
-                            <template x-for="(sub, subIndex) in item.sub_menu" :key="subIndex">
-                              <a :href="sub.url" class="block hover:text-primary   transition-all duration-200   group">
-                                <h3 class="text-xl mb-1" x-text="sub.label"></h3>
-                                <p class="text-xs opacity-70" x-text="sub.description || ''"></p>
-                              </a>
-                            </template>
-                          </div>
-                        </div>
+                      <div class="flex flex-col gap-4">
+                        <template x-for="(sub, subIndex) in item.sub_menu" :key="subIndex">
+                          <a :href="sub.url" class="block hover:text-primary   transition-all duration-200   group">
+                            <h3 class="text-xl mb-1" x-text="sub.label"></h3>
+                            <p class="text-xs opacity-70" x-text="sub.description || ''"></p>
+                          </a>
+                        </template>
                       </div>
-                    </template>
-                  </li>
+                    </div>
+                  </div>
                 </template>
-              </ul>
-               <button class="text-xl" ><i class="bi bi-search"></i></button>
+              </li>
+            </template>
+          </ul>
+          <button class="text-xl"><i class="bi bi-search"></i></button>
         </div>
       </div>
     </header><!--  end dekstop navbar -->
@@ -80,40 +80,39 @@
       </nav>
       <div x-show="openMenu">
         <div class=" top-full left-0 w-full h-full bg-white p-6 z-50">
-            <ul x-show="data.menu_utama" class="flex flex-col gap-3">
-              <template x-for="(item, index) in data.menu_utama" :key="index">
-                <li x-data="{ open: false }">
-                  <!-- Main Menu -->
-                  <a :href="item.sub_menu && item.sub_menu.length > 0 ? '#' : item.url"
-                    @click="if(item.sub_menu && item.sub_menu.length > 0) { open = !open; $event.preventDefault(); }"
-                    class="text-xs uppercase flex items-center justify-between py-2">
-                    <span x-text="item.label"></span>
-                    <template x-if="item.sub_menu && item.sub_menu.length > 0">
-                      <i class="bi bi-chevron-down transition-transform duration-200"
-                        :class="{ 'rotate-180': open }"></i>
-                    </template>
-                  </a>
-
-                  <!-- Submenu -->
+          <ul x-show="data.menu_utama" class="flex flex-col gap-3">
+            <template x-for="(item, index) in data.menu_utama" :key="index">
+              <li x-data="{ open: false }">
+                <!-- Main Menu -->
+                <a :href="item.sub_menu && item.sub_menu.length > 0 ? '#' : item.url"
+                  @click="if(item.sub_menu && item.sub_menu.length > 0) { open = !open; $event.preventDefault(); }"
+                  class="text-xs uppercase flex items-center justify-between py-2">
+                  <span x-text="item.label"></span>
                   <template x-if="item.sub_menu && item.sub_menu.length > 0">
-                    <ul x-show="open" x-transition:enter="transition ease-out duration-200"
-                      x-transition:enter-start="opacity-0 -translate-y-2"
-                      x-transition:enter-end="opacity-100 translate-y-0"
-                      x-transition:leave="transition ease-in duration-150"
-                      x-transition:leave-start="opacity-100 translate-y-0"
-                      x-transition:leave-end="opacity-0 -translate-y-2"
-                      class="pl-4 mt-2 space-y-2 border-l-2 border-gray-200">
-                      <template x-for="(sub, subIndex) in item.sub_menu" :key="subIndex">
-                        <li>
-                          <a :href="sub.url" x-text="sub.label"
-                            class="text-xs text-gray-600 hover:text-primary transition-colors block py-1"></a>
-                        </li>
-                      </template>
-                    </ul>
+                    <i class="bi bi-chevron-down transition-transform duration-200" :class="{ 'rotate-180': open }"></i>
                   </template>
-                </li>
-              </template>
-            </ul>
+                </a>
+
+                <!-- Submenu -->
+                <template x-if="item.sub_menu && item.sub_menu.length > 0">
+                  <ul x-show="open" x-transition:enter="transition ease-out duration-200"
+                    x-transition:enter-start="opacity-0 -translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-150"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 -translate-y-2"
+                    class="pl-4 mt-2 space-y-2 border-l-2 border-gray-200">
+                    <template x-for="(sub, subIndex) in item.sub_menu" :key="subIndex">
+                      <li>
+                        <a :href="sub.url" x-text="sub.label"
+                          class="text-xs text-gray-600 hover:text-primary transition-colors block py-1"></a>
+                      </li>
+                    </template>
+                  </ul>
+                </template>
+              </li>
+            </template>
+          </ul>
         </div>
       </div>
     </header> <!-- end mobile navbar -->
@@ -127,9 +126,12 @@
               <div class="absolute top-0 left-0 w-full h-full bg-black opacity-20 z-10"></div>
               <img :src="item.image" class="w-full h-screen object-cover object-center">
               <div
-                class="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-screen-md w-full px-6">
-                <h1 class="text-4xl font-bold text-white r mb-4" x-text="item.title"></h1>
-                <p class="text-lg text-white " x-text="item.sub_title"></p>
+                class="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-[1140px] w-full px-6">
+                <div class="max-w-[768px]">
+                  <h1 class="text-4xl font-bold text-white r mb-4" x-text="item.title"></h1>
+                  <p class="text-lg text-white " x-text="item.sub_title"></p>
+                </div>
+
               </div>
             </div>
           </template>
@@ -143,7 +145,7 @@
 
 
     </section>
- <!-- produk unggulan -->
+    <!-- produk unggulan -->
     <section class="mb-16">
       <div class="container ">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:divide-x divide-gray-300">
@@ -153,7 +155,8 @@
           <div class="lg:col-span-9">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
               <template x-for="pr in data.rekomendasi[1].product" :key="pr.title">
-                <div class="border border-gray-300 flex flex-col hover:shadow-lg transition-shadow duration-300 group rounded-lg overflow-hidden">
+                <div
+                  class="border border-gray-300 flex flex-col hover:shadow-lg transition-shadow duration-300 group rounded-lg overflow-hidden">
                   <div class="h-[140px] relative overflow-hidden">
                     <img :src="pr.image" class="w-full h-[140px] object-cover group-hover:scale-105 duration-300">
                   </div>
@@ -188,12 +191,12 @@
       </div>
     </section>
 
-   <!--  Keunggulan -->
+    <!--  Keunggulan -->
     <section class="mb-16">
       <div class="container">
-        <div class="grid grid-cols-1 lg:grid-cols-6">
+        <div class="grid grid-cols-1 lg:grid-cols-6 gap-6">
           <div class="lg:col-span-2">
-            <div class="p-4 lg:p-6 bg-white relative lg:-mr-20">
+            <div class="p-4 lg:p-6 bg-white relative z-10 lg:-mr-20 ">
               <h2 x-text="data.aplikasi_produk[0].title" class="text-3xl font-medium mb-5"></h2>
               <p x-text="data.aplikasi_produk[0].deskripsi"></p>
               <a href="#"
@@ -207,7 +210,9 @@
           <div class="lg:col-span-4">
             <div class="grid grid-cols-1 md:grid-cols-2">
               <template x-for="item in data.aplikasi_produk[0].images">
-                <img :src="item" class="w-full h-[180px] object-cover">
+                <div class="w-full h-[180px] overflow-hidden relative bg-black  ">
+                  <img :src="item" class="w-full h-[180px] object-cover hover:scale-105 hover:opacity-65 duration-200">
+                </div>
               </template>
             </div>
           </div>
@@ -248,25 +253,25 @@
       <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
           <div class="flex flex-col justify-center gap-2 lg:col-span-2 ">
-           <img :src="data.footer.logo" alt="" class="w-12">
-           <p class="text-xs" x-text="data.footer.deskripsi"></p>
+            <img :src="data.footer.logo" alt="" class="w-12">
+            <p class="text-xs" x-text="data.footer.deskripsi"></p>
           </div>
           <div class="flex flex-col gap-2">
             <h4 class="text-lg font-medium">Kontak</h4>
             <p class="flex gap-2"><i class="bi bi-geo-alt"></i> <span x-text="data.footer.contact.alamat"></span> </p>
-            <p class=" flex gap-2" ><i class="bi bi-telephone"></i> 
+            <p class=" flex gap-2"><i class="bi bi-telephone"></i>
               <span x-text="data.footer.contact.phone"></span>
             </p>
             <p class="flex gap-2"> <i class="bi bi-envelope"></i>
-            <span  x-text="data.footer.contact.email"></span>
-          </p>
+              <span x-text="data.footer.contact.email"></span>
+            </p>
           </div>
           <div class="flex flex-col gap-2">
             <h4 class="text-lg font-medium">Produk</h4>
             <ul>
-               <template x-for="item in data.menu_utama[1].sub_menu">
-                 <li><a :href="item.url" x-text="item.label" class="hover:text-primary duration-200"></a></li>
-               </template>
+              <template x-for="item in data.menu_utama[1].sub_menu">
+                <li><a :href="item.url" x-text="item.label" class="hover:text-primary duration-200"></a></li>
+              </template>
             </ul>
           </div>
         </div>
