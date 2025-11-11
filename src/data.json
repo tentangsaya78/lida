@@ -15,24 +15,21 @@
     ],
     "menu_utama": [
         {
-            "label": "Kategori",
+            "label":"Beranda"
+        },
+        {
+            "label": "Produk",
             "url": "#",
             "sub_menu": [
                 {
-                    "label": "Seri Jendela",
-                    "url": "#"
+                    "label": " Jendela",
+                    "url": "#",
+                    "icon": "bi bi-door-open"
                 },
                 {
-                    "label": "Seri Pintu",
-                    "url": "#"
-                },
-                {
-                    "label": "Seri Pintu Cor Alumunium",
-                    "url": "#"
-                },
-                {
-                    "label": "Mewah Minimalis",
-                    "url": "#"
+                    "label": "Pintu",
+                    "url": "#",
+                    "icon":"bi bi-door-open"
                 }
             ]
         },
@@ -41,11 +38,15 @@
             "url": "#"
         },
         {
-            "label": "Pemasangan Profesional",
+            "label": "Instalasi",
             "url": "#"
         },
         {
-            "label": "Kartu Nama Produk",
+            "label": "Distributor",
+            "url": "#"
+        },
+        {
+            "label": "Tentang Kami",
             "url": "#"
         }
     ],
@@ -73,37 +74,32 @@
         {
             "product": [
                 {
-                    "title": "Produk One",
+                    "title": "Jendela",
                     "image": "https://images.pexels.com/photos/922796/pexels-photo-922796.jpeg",
                     "description":"Suspendisse potenti. Ut nec dapibus velit, in malesuada leo."
                 },
                 {
-                    "title": "Produk Two",
+                    "title": "Pintu Cor Almunium",
                     "image": "https://images.pexels.com/photos/3935314/pexels-photo-3935314.jpeg",
                     "description":"Nulla euismod, dolor at ultrices porta, leo nibh blandit est."
                 },
                 {
-                    "title": "Produk Three",
+                    "title": "Pintu Mewah Minimalis",
                     "image": "https://images.pexels.com/photos/4469147/pexels-photo-4469147.jpeg",
                     "description":"ed ultrices maximus erat, nec elementum sem bibendum at. "
-                },
-                {
-                    "title": "Produk Four",
-                    "image": "https://images.pexels.com/photos/3255244/pexels-photo-3255244.jpeg",
-                    "description":"Suspendisse tristique, ex non convallis placerat, risus arcu efficitur dui."
                 }
             ]
         }
     ],
     "sekilas": [
         {
-            "title": "Tentang Kami",
+            "title": "Sekilas Lida Karya",
             "deskripsi":"Perusahaan dilengkapi dengan peralatan produksi yang canggih, telah membentuk sistem manajemen yang komprehensif, dan secara ketat mematuhi standar sertifikasi sistem manajemen mutu internasional ISO 9001. Semua produk menggunakan aluminium impor, dan aksesori terkait juga disesuaikan secara profesional. "
         }
     ],
     "aplikasi_produk":[
         {
-            "title":"Produk Dengan Performa",
+            "title":"Keunggulan",
             "deskripsi":" Suspendisse tristique, ex non convallis placerat, risus arcu efficitur dui, et fermentum eros lacus eu nulla. Nullam malesuada tempor malesuada. Duis arcu ligula, vehicula ut hendrerit vitae, pharetra non dolor.",
             "images":[
                 "https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg",

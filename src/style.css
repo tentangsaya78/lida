@@ -52,3 +52,17 @@ Mobile Navbar
   background: var(--color-secondary);
   transition: width 0.3s ease;
 }
+
+/* =====================
+Splide
+===================== */
+.splide__pagination{
+ @apply justify-end px-6 w-full max-w-[300px] bottom-6;
+} 
+.splide__pagination__page{
+  @apply w-3 h-3 bg-white;
+}
+
+.splide__pagination__page.is-active{
+  @apply bg-primary;
+}
