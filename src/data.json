@@ -24,12 +24,23 @@
                 {
                     "label": " Jendela",
                     "url": "#",
-                    "icon": "bi bi-door-open"
+                    "icon": "bi bi-door-open",
+                    "description":"ed ultrices maximus erat, nec elementum sem bibendum at. ",
+                    "image": "https://images.pexels.com/photos/922796/pexels-photo-922796.jpeg"
                 },
                 {
-                    "label": "Pintu",
+                    "label": "Pintu Cor Almunium",
                     "url": "#",
-                    "icon":"bi bi-door-open"
+                    "icon":"bi bi-door-open",
+                    "description":"Nulla euismod, dolor at ultrices porta, leo nibh blandit est.",
+                    "image": "https://images.pexels.com/photos/3935314/pexels-photo-3935314.jpeg"
+                },
+                {
+                    "label": "Pintu Mewah Minimalis",
+                    "url": "#",
+                    "icon":"bi bi-door-open",
+                    "description":"ed ultrices maximus erat, nec elementum sem bibendum at. ",
+                    "image": "https://images.pexels.com/photos/4469147/pexels-photo-4469147.jpeg"
                 }
             ]
         },
@@ -62,7 +73,7 @@
             "sub_title":"Sed id ultrices erat. Proin rhoncus ligula vitae bibendum molestie."
         },
         {
-            "image": "https://images.pexels.com/photos/34574609/pexels-photo-34574609.jpeg",
+            "image": "https://images.pexels.com/photos/7533766/pexels-photo-7533766.jpeg",
             "title": "Maecenas sit amet commodo arcu. Integer varius aliquet mauris",
             "sub_title":"It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
         }

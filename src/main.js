@@ -23,7 +23,7 @@ document.addEventListener('alpine:initialized', () => {
     type: 'fade',
     perPage: 1,
     autoplay: true,
-    interval: 3000,
+    interval: 4000,
     speed: 1500,
     arrows: false,
     pagination: true,
