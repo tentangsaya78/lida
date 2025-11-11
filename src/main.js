@@ -29,6 +29,7 @@ document.addEventListener('alpine:initialized', () => {
     pagination: true,
     pauseOnHover: false,
     pauseOnFocus: false,
+     rewind: true, // Tambahkan ini untuk infinity loop
   });
 
   let progressInterval = null;
